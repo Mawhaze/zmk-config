@@ -16,7 +16,7 @@
 			compatible = "zmk,behaviors-macro";
 			#binding-cells = <0>;
 			bindings 
-			= <&macro_press &kp LCTL &kp LSHFT &kp s>
+			= <&macro_press &kp LCTL &kp LSHFT &kp S>
 			;
 		};
 	};
