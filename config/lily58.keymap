@@ -16,7 +16,8 @@
 			compatible = "zmk,behaviors-macro";
 			#binding-cells = <0>;
 			bindings
-				= <&kp LCTL &kp LSHFT &kp s>;
+				= <&kp LCTL &kp LSHFT &kp s>
+				;
 		};
 	};
 
@@ -24,7 +25,6 @@
 		compatible = "zmk,keymap";
 
 		default_layer {
-			bindings = <&ctrl_shift_s>;
 // ------------------------------------------------------------------------------------------------------------
 // |  `  |  q  |  w  |  e   |  r   |  t   |                   |  y   |  u    |  i    |  o   |   p   |   BSPC   |
 // |  TAB  |  a  |  s  |  d   |  f   |  g   |                   |  h   |  j    |  k    |  l   |   ;   |   ENTER   |
