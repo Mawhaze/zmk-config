@@ -14,7 +14,7 @@
 	macros {
 		ctrl_shift_s: ctrl_shift_s {
 			label = "screenshot_cshs";
-			compatible = "zmk,behaviors-macro";
+			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings 
 			= <&macro_press &kp LCTL &kp LSHFT &kp S>
