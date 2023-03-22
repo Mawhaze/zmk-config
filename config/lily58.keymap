@@ -12,7 +12,7 @@
 / {
 	macros {
 		ctrl_shift_s: ctrl_shift_s {
-			label = "screenshot_cshs"
+			label = "screenshot_cshs";
 			compatible = "zmk,behaviors-macro";
 			#binding-cells = <0>;
 			bindings
