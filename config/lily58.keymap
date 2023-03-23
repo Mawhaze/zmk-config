@@ -53,7 +53,7 @@
 // |      |      |   !  |  @   |  #   |  $   |                   |  :   |  1    |  2    |  3   |   /   |      |
 &trans  &trans &kp EXCL &kp AT &kp POUND &kp DLLR              &kp COLON &kp N1  &kp N2 &kp N3  &kp FSLH  &trans
 // |       |     |  %   |   ^   |   &   |      |        |  |       |      |   .   |  0    |  =   |   *   |    |
-&trans &trans &kp PRCNT &kp CARET &kp AMPS &trans &transC &trans &trans  &kp DOT &kp N0   &kp EQUAL &kp KP_MULTIPLY  &trans
+&trans &trans &kp PRCNT &kp CARET &kp AMPS &trans &trans &trans &trans  &kp DOT &kp N0   &kp EQUAL &kp KP_MULTIPLY  &trans
 //                     | ESC  | RAISE  | LOWER|  SPACE |  | SPACE | LOWER| RAISE  |       |
                         &trans &mo 2 &mo 1  &kp SPACE  &kp SPACE  &mo 1  &mo 2 &trans
 			>;
