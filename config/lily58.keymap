@@ -12,12 +12,20 @@
 
 / {
 	macros {
-		ctrl_shift_s: ctrl_shift_s {
+		gui_shift_s: gui_shift_s {
 			label = "screenshot_cshs";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings 
-			= <&kp LCTL &kp LSHFT &kp S>
+			= <&kp LGUI &kp LSHFT &kp S>
+			;
+		};
+		gui_space: gui_space {
+			label = "mac search"
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&kp LGUI &kp SPACE>
 			;
 		};
 	};
@@ -34,8 +42,8 @@
 &kp TAB   &kp A  &kp S  &kp D    &kp F &kp G       		               &kp H  &kp J    &kp K     &kp L   &kp SEMI    &kp ENTER
 // |  SHIFT |  z  |  x  |  c   |  v   |  b   |    		               |  n   |  m    |  ,    |  .   |   /   |   SHIFT   |
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V  &kp B    		                  &kp N  &kp M    &kp COMMA     &kp DOT   &kp SLASH &kp RSHFT
-// | CTRL |  LGUI   |  LALT   |  \    |  '   |     |  ESC   |	 ss |    |     |   home   |   end   |   delete  |   insert   | - |
-&kp LCTL &kp LGUI  &kp LALT  &kp BSLH &kp SQT &trans &kp ESC  &ctrl_shift_s &trans &kp HOME &kp END  &kp DELETE  &kp INSERT   &kp MINUS
+// | CTRL |  LGUI   |  LALT   |  \    |  '   |     |  ESC   |	 search |    |     |   home   |   end   |   delete  |   insert   | - |
+&kp LCTL &kp LGUI  &kp LALT  &kp BSLH &kp SQT &trans &kp ESC  &gui_space &trans &kp HOME &kp END  &kp DELETE  &kp INSERT   &kp MINUS
 //                     | ESC  | RAISE  | LOWER|  SPACE |  | SPACE | LOWER| RAISE  |       |
                         &kp ESC &mo 2    &mo 1 &kp SPACE  &kp SPACE  &mo 1 &mo 2   &trans			
 			>;
@@ -52,8 +60,8 @@
 &trans &kp LEFT_ARROW &kp DOWN_ARROW &kp RIGHT_ARROW &trans &kp LPAR &kp RPAR &kp N4 &kp N5 &kp N6 &kp MINUS &trans
 // |      |      |   !  |  @   |  #   |  $   |                   |  :   |  1    |  2    |  3   |   /   |      |
 &trans  &trans &kp EXCL &kp AT &kp POUND &kp DLLR              &kp COLON &kp N1  &kp N2 &kp N3  &kp FSLH  &trans
-// |       |     |  %   |   ^   |   &   |      |        |  |       |      |   .   |  0    |  =   |   *   |    |
-&trans &trans &kp PRCNT &kp CARET &kp AMPS &trans &trans &trans &trans  &kp DOT &kp N0   &kp EQUAL &kp KP_MULTIPLY  &trans
+// |       |     |  %   |   ^   |   &   |      |        |  |    screensh   |      |   .   |  0    |  =   |   *   |    |
+&trans &trans &kp PRCNT &kp CARET &kp AMPS &trans &trans &gui_shift_s &trans  &kp DOT &kp N0   &kp EQUAL &kp KP_MULTIPLY  &trans
 //                     | ESC  | RAISE  | LOWER|  SPACE |  | SPACE | LOWER| RAISE  |       |
                         &trans &mo 2 &mo 1  &kp SPACE  &kp SPACE  &mo 1  &mo 2 &trans
 			>;
