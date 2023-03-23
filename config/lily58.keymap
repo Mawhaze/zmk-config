@@ -19,7 +19,7 @@
 			bindings 
 			= <&kp LGUI &kp LSHFT &kp S>
 			;
-		};
+		},
 		gui_space: gui_space {
 			label = "mac_search"
 			compatible = "zmk,behavior-macro";
