@@ -90,7 +90,7 @@
 				bindings = <
 // ------------------------------------------------------------------------------------------------------------
 // |  |        |         |         |         |       |                |          |                  |             |        |        |       |
-& &  & & & &                    &trans     &trans            &trans        &trans  &trans    &trans
+&trans &trans  &trans &trans &trans &trans                    &trans     &trans            &trans        &trans  &trans    &trans
 // |       |     :wq      |      :q!       |            |            |           |                |    |      |     |        |        |       |
 &trans        &vim_save_quit      &vim_quit         &trans        &trans     &trans                     & &   &   &   &   &
 // |       |           |             |            |            |           |                |    |         |     |        |        |       |
