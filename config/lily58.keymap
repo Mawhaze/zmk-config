@@ -17,7 +17,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings 
-			= <&kp COLON &kp Q &kp EXCL>
+			= <&kp COLON &kp Q &kp EXCL &kp ENTER>
 			;
 		};
 		vim_save_quit: vim_save_quit {
@@ -25,7 +25,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-			= <&kp COLON &kp W &kp Q>
+			= <&kp COLON &kp W &kp Q &kp ENTER>
 			;
 		};
 	};
@@ -91,8 +91,8 @@
 // ------------------------------------------------------------------------------------------------------------
 // |  |        |         |         |         |       |                |          |                  |             |        |        |       |
 &trans &trans  &trans &trans &trans &trans                    &trans     &trans            &trans        &trans  &trans    &trans
-// |       |     :wq      |      :q!       |            |            |           |                |    |      |     |        |        |       |
-&trans        &vim_save_quit      &vim_quit       &trans        &trans     &trans                     &trans &trans   &trans   &trans   &trans   &trans
+// |       |          |      :wq!       |     :q!       |            |           |                |    |      |     |        |        |       |
+&trans        &trans       &vim_save_quit       &vim_quit        &trans     &trans                     &trans &trans   &trans   &trans   &trans   &trans
 // |       |           |             |            |            |           |                |    |         |     |        |        |       |
 &trans       &trans         &trans       &trans        &trans     &trans                     &trans     &trans     &trans  &trans   &trans   &trans
 // |       |           |             |             |            |           |        |      |          |                  |             |        |        |       |   
