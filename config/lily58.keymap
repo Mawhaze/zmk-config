@@ -12,20 +12,20 @@
 
 / {
 	macros {
-		gui_shift_s: gui_shift_s {
-			label = "screenshot_cshs";
+		vim_quit: vim_quit {
+			label = ":q!";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings 
-			= <&kp LGUI &kp LSHFT &kp S>
+			= <&kp : &kp q &kp !>
 			;
 		};
-		gui_space: gui_space {
-			label = "mac_search";
+		vim_save_quit: vim_save_quit {
+			label = ":wq";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-			= <&kp LGUI &kp SPACE>
+			= <&kp : &kp w &kp q>
 			;
 		};
 	};
@@ -42,10 +42,10 @@
 &kp TAB   &kp A  &kp S  &kp D    &kp F &kp G       		               &kp H  &kp J    &kp K     &kp L   &kp SEMI    &kp ENTER
 // |  SHIFT |  z  |  x  |  c   |  v   |  b   |    		               |  n   |  m    |  ,    |  .   |   /   |   SHIFT   |
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V  &kp B    		                  &kp N  &kp M    &kp COMMA     &kp DOT   &kp SLASH &kp RSHFT
-// | CTRL |  LGUI   |  LALT   |  \    |  '   |     |  ESC   |	 search |    |     |   home   |   end   |   delete  |   insert   | - |
-&kp LCTL &kp LGUI  &kp LALT  &kp BSLH &kp SQT &trans &kp ESC  &kp LG(SPACE) &trans &kp HOME &kp END  &kp DELETE  &kp INSERT   &kp MINUS
-//                     | ESC  | RAISE  | LOWER|  SPACE |  | SPACE | LOWER| RAISE  |       |
-                        &kp ESC &mo 2    &mo 1 &kp SPACE  &kp SPACE  &mo 1 &mo 2   &trans			
+// | CTRL |  LGUI   |  LALT   |  \    |  '   |     |  ESC   |	 VIM |    |     |   home   |   end   |   delete  |   insert   | - |
+&kp LCTL &kp LGUI  &kp LALT  &kp BSLH &kp SQT &trans &kp ESC  &mo 3 &trans &kp HOME &kp END  &kp DELETE  &kp INSERT   &kp MINUS
+//                     | ESC  | RAISE  | LOWER|  SPACE |  | SPACE | LOWER| RAISE  |   search    |
+                        &kp ESC &mo 2    &mo 1 &kp SPACE  &kp SPACE  &mo 1 &mo 2   &kp LG(SPACE)			
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -86,5 +86,20 @@
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
 		};
+		vim_layer {
+				bindings = <
+// ------------------------------------------------------------------------------------------------------------
+// |  |        |         |         |         |       |                |          |                  |             |        |        |       |
+& &  & & & &                    &trans     &trans            &trans        &trans  &trans    &trans
+// |       |     :wq      |      :q!       |            |            |           |                |    |      |     |        |        |       |
+&trans        &vim_save_quit      &vim_quit         &trans        &trans     &trans                     & &   &   &   &   &
+// |       |           |             |            |            |           |                |    |         |     |        |        |       |
+&trans       &trans         &trans       &trans        &trans     &trans                     &     &     &  &trans   &trans   &trans
+// |       |           |             |             |            |           |        |      |          |                  |             |        |        |       |   
+&trans       &trans     &trans        & &trans    &trans     &trans   &trans    &trans    &trans              &trans      &trans  &trans  &trans
+//                     |       |      |       |          |         |       |      |       |       
+                        &trans   &mo 2  &mo 1  &kp SPACE  &kp SPACE  &mo 1  &mo 2   &trans
+		>;
+			}
 	};
 };
