@@ -122,7 +122,7 @@
 				bindings = <
 // ------------------------------------------------------------------------------------------------------------
 // |  |   cmd_1     |   cmd_2      |   cmd_3      |   cmd_4    |       |                |          |                  |             |        |        |       |
-&trans &term_win_1    &term_win_2    &term_win_3    &term_win_4 &trans                    &trans     &trans            &trans        &trans  &trans    &trans
+&trans  &kp LG(1)      &kp LG(2)      &kp LG(3)      &kp LG(4)     &trans                    &trans     &trans            &trans        &trans  &trans    &trans
 // |       |          |      :wq!       |     :q!       |            |           |                |    |      |     |        |        |       |
 &trans        &trans       &vim_save_quit       &vim_quit        &trans     &trans                     &trans &trans   &trans   &trans   &trans   &trans
 // |       |           |             |            |            |           |                |    |         |     |        |        |       |
