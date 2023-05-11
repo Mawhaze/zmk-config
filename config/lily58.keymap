@@ -89,8 +89,8 @@
 		vim_layer {
 				bindings = <
 // ------------------------------------------------------------------------------------------------------------
-// |  |   cmd_1     |   cmd_2      |   cmd_3      |   cmd_4    |       |                |          |                  |             |        |        |       |
-&trans  &kp LG(N1)      &kp LG(N2)      &kp LG(N3)      &kp LG(N4)     &trans                    &trans     &trans            &trans        &trans  &trans    &trans
+// |  |   cmd_1     |   cmd_2      |   cmd_3      |   cmd_4    |   cmd_tab    |                |          |                  |             |        |        |       |
+&trans  &kp LG(N1)      &kp LG(N2)      &kp LG(N3)      &kp LG(N4)     &kp LGUI(TAB)                    &trans     &trans            &trans        &trans  &trans    &trans
 // |       |          |      :wq!       |     :q!       |            |           |                |    |      |     |        |        |       |
 &trans        &trans       &vim_save_quit       &vim_quit        &trans     &trans                     &trans &trans   &trans   &trans   &trans   &trans
 // |       |           |             |            |            |           |                |    |         |     |        |        |       |
