@@ -28,38 +28,6 @@
 			= <&kp COLON &kp W &kp Q &kp ENTER>
 			;
 		};
-		term_win_1: term_win_1 {
-			label = "cmd_1";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&kp LGUI &kp N1>
-			;
-		};
-		term_win_2: term_win_2 {
-			label = "cmd_2";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&kp LGUI &kp N2>
-			;
-		};
-		term_win_3: term_win_3 {
-			label = "cmd_3";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&kp LGUI &kp N3>
-			;
-		};
-		term_win_4: term_win_4 {
-			label = "cmd_4";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&kp LGUI &kp N4>
-			;
-		};
 	};
 
 	keymap {
@@ -122,7 +90,7 @@
 				bindings = <
 // ------------------------------------------------------------------------------------------------------------
 // |  |   cmd_1     |   cmd_2      |   cmd_3      |   cmd_4    |       |                |          |                  |             |        |        |       |
-&trans  &kp LG(1)      &kp LG(2)      &kp LG(3)      &kp LG(4)     &trans                    &trans     &trans            &trans        &trans  &trans    &trans
+&trans  &kp LG(N1)      &kp LG(N2)      &kp LG(N3)      &kp LG(N4)     &trans                    &trans     &trans            &trans        &trans  &trans    &trans
 // |       |          |      :wq!       |     :q!       |            |           |                |    |      |     |        |        |       |
 &trans        &trans       &vim_save_quit       &vim_quit        &trans     &trans                     &trans &trans   &trans   &trans   &trans   &trans
 // |       |           |             |            |            |           |                |    |         |     |        |        |       |
