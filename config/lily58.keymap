@@ -52,8 +52,8 @@
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V  &kp B    		                  &kp N  &kp M    &kp COMMA     &kp DOT   &kp SLASH &kp RSHFT
 // | CTRL |  LGUI   |  LALT   |  \    |  '   |  RAISE   |  ESC   |	 VIM |  RAISE  |     |   home   |   end   |   delete  |   insert   | - |
 &kp LCTL &kp LGUI  &kp LALT  &kp BSLH &kp SQT &mo 1 &kp ESC  &mo 3 &mo 1 &kp HOME &kp END  &kp DELETE  &kp INSERT   &kp MINUS
-//                     | ESC  |         | LOWER |  SPACE |  | SPACE | RAISE |        |   search    |
-                        &kp ESC &trans    &mo 2 &kp SPACE  &kp SPACE  &mo 2 &trans   &kp LG(SPACE)			
+//                     |      |         | LOWER |  SPACE |  | SPACE | RAISE |        |   search    |
+                        &trans &trans    &mo 2 &kp SPACE  &kp SPACE  &mo 2 &trans   &kp LG(SPACE)			
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -97,14 +97,14 @@
 		vim_layer {
 				bindings = <
 // ------------------------------------------------------------------------------------------------------------
-// |  |   cmd_1     |   cmd_2      |   cmd_3      |   cmd_4    |   cmd_tab    |                |          |                  |             |        |        |       |
-&trans  &kp LG(N1)      &kp LG(N2)      &kp LG(N3)      &kp LG(N4)     &kp LG(TAB)                    &trans     &trans            &trans        &trans  &trans    &trans
+// |  |   cmd_1     |   cmd_2      |   cmd_3      |   cmd_4    |   cmd_5    |                |          |                  |             |        |        |       |
+&trans  &kp LG(N1)      &kp LG(N2)      &kp LG(N3)      &kp LG(N4)     &kp(N5)         &trans     &trans            &trans        &trans  &trans    &trans
 // |       |          |      :wq!       |     :q!       |            |           |                |    |      |     |        |        |       |
 &trans        &trans       &vim_save_quit       &vim_quit        &trans     &trans                     &trans &trans   &trans   &trans   &trans   &trans
 // |       |           |             |            |            |           |                |    |         |     |        |        |       |
 &trans       &trans         &trans       &trans        &trans     &trans                     &trans     &trans     &trans  &trans   &trans   &trans
-// |       |           |             |             |            |           |        |      |          |                  |             |        |        |       |   
-&trans       &trans     &trans        &trans &trans    &trans     &trans   &trans    &trans    &trans              &trans      &trans  &trans  &trans
+// |       |           |             |             |            |    cmd_tab  |        |      |          |                  |             |        |        |       |   
+&trans       &trans     &trans        &trans &trans    &trans     &kp LG(TAB)   &trans    &trans    &trans              &trans      &trans  &trans  &trans
 //                     |       |      |       | float term|         |       |      |       |       
                         &trans   &mo 2  &mo 1  &vim_term  &kp SPACE  &mo 1  &mo 2   &trans
 		  >;
