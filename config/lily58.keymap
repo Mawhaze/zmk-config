@@ -69,9 +69,9 @@
 // |      |      |   !  |  @   |  #   |  $   |                   |  :   |  1    |  2    |  3   |   /   |      |
 &trans  &trans &kp EXCL &kp AT &kp POUND &kp DLLR              &kp COLON &kp N1  &kp N2 &kp N3  &kp FSLH  &trans
 // |       |     |  %   |   ^   |   &   |      |        |  |    screensh   |      |   .   |  0    |  =   |   *   |    |
-&trans &trans &kp PRCNT &kp CARET &kp AMPS &trans &trans &kp LC(LS(S)) &trans  &kp DOT &kp N0   &kp EQUAL &kp KP_MULTIPLY  &trans
+&trans &trans &kp PRCNT &kp CARET &kp AMPS &mo 1 &trans &kp LC(LS(S)) &mo 1  &kp DOT &kp N0   &kp EQUAL &kp KP_MULTIPLY  &trans
 //                     | ESC  | RAISE  | LOWER|  SPACE |  | SPACE | LOWER| RAISE  |       |
-                        &trans &mo 2 &mo 1  &kp SPACE  &kp SPACE  &mo 1  &mo 2 &trans
+                        &trans &trans &mo 2  &kp SPACE  &kp SPACE  &mo 2  &trans &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -87,9 +87,9 @@
 // |       |           |             |            |            |           |                |  K_PREV  |   K_NEXT         |   K_VOL_DN  |        |        |       |
 &trans       &trans         &trans       &trans        &trans     &trans                     &kp C_PREV     &kp C_NEXT      &kp C_VOL_DN  &trans   &trans   &trans
 // |       |           |             |             |            |           |        |      |          |                  |             |        |        |       |   
-&trans       &trans     &trans        &ext_power EP_TOG &trans    &trans     &trans   &trans    &trans    &trans              &trans      &trans  &trans  &trans
+&trans       &trans     &trans        &trans &trans    &mo 1     &trans   &trans    &mo 1    &trans              &trans      &trans  &trans  &trans
 //                     |       |      |       |          |         |       |      |       |       
-                        &trans   &mo 2  &mo 1  &kp SPACE  &kp SPACE  &mo 1  &mo 2   &trans
+                        &trans   &trans  &mo 2  &kp SPACE  &kp SPACE  &mo 2  &trans   &trans
 			>;
 
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -104,9 +104,9 @@
 // |       |           |             |            |            |           |                |    |         |     |        |        |       |
 &trans       &trans         &trans       &trans        &trans     &trans                     &trans     &trans     &trans  &trans   &trans   &trans
 // |       |           |             |             |            |    cmd_tab  |        |      |          |                  |             |        |        |       |   
-&trans       &trans     &trans        &trans &trans    &trans     &kp LG(TAB)   &trans    &trans    &trans              &trans      &trans  &trans  &trans
+&trans       &trans     &trans        &trans &trans    &mo 1     &kp LG(TAB)   &trans    &mo 1    &trans              &trans      &trans  &trans  &trans
 //                     |       |      |       | float term|         |       |      |       |       
-                        &trans   &mo 2  &mo 1  &vim_term  &kp SPACE  &mo 1  &mo 2   &trans
+                        &trans   &trans  &mo 2  &vim_term  &kp SPACE  &mo 2  &trans   &trans
 		  >;
 
 		  sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
