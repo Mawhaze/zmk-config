@@ -20,20 +20,28 @@
 			= <&kp COLON &kp Q &kp EXCL &kp ENTER>
 			;
 		};
-		vim_save_quit: vim_save_quit {
-			label = ":wq";
+		ide_co_chat: ide_co_chat {
+			label = "switch to ide copilot chat";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-			= <&kp COLON &kp W &kp Q &kp ENTER>
+			= <&kp LGUI &kp LALT &kp G>
 			;
 		};
-		vim_term: vim_term {
-			label = "floating nvmim terminal";
+		ide_fe: ide_fe {
+			label = "switch to ide file explorer";
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-			= <&kp SPACE &kp T &kp F>
+			= <&kp LCTL &kp LSHFT &kp E>
+			;
+		};
+		ide_term: ide_term {
+			label = "switch to ide terminal";
+			compatible = "zmk,behavior-macro";
+			#binding-cells = <0>;
+			bindings
+			= <&kp LCTL &kp GRAVE>
 			;
 		};
 		vim_find_replace: vim_find_replace {
@@ -106,16 +114,16 @@
 		vim_layer {
 				bindings = <
 // ------------------------------------------------------------------------------------------------------------
-// |  |   cmd_1     |   cmd_2      |   cmd_3      |   cmd_4    |   cmd_5    |                |          |                  |             |        |        |       |
-&trans  &kp LG(N1)      &kp LG(N2)      &kp LG(N3)      &kp LG(N4)     &kp(N5)         &trans     &trans            &trans        &trans  &trans    &trans
-// |       |          |      :wq!       |     :q!       |     :%s       |           |                |    |      |     |        |        |       |
-&trans        &trans       &vim_save_quit  &vim_quit    &vim_find_replace     &trans                     &trans &trans   &trans   &trans   &trans   &trans
-// |       |           |             |            |            |           |                |    |         |     |        |        |       |
-&trans       &trans         &trans       &trans        &trans     &trans                     &trans     &trans     &trans  &trans   &trans   &trans
+// |   |        |          |            |            |   CTRL TAB    |                |          |                  |             |        |        |       |
+&trans  &trans      &trans      &trans      &trans     &kp LCTL(TAB)         &trans     &trans            &trans        &trans  &trans    &trans
+// |       |          |      cmd S       |     :q!       |     :%s       | copilot |                |    |      |     |        |        |       |
+&trans        &trans       &kp LG(S)  &vim_quit    &vim_find_replace     &ide_co_chat                     &trans &trans   &trans   &trans   &trans   &trans
+// |       |           |             |            |            |  files  |                |    |         |     |        |        |       |
+&trans       &trans         &trans       &kp LGUI(N1)        &trans     &ide_fe                     &trans     &trans     &trans  &trans   &trans   &trans
 // |       |           |             |             |            |    cmd_tab  |        |      |          |                  |             |        |        |       |   
 &trans       &trans     &trans        &trans &trans    &mo 1     &kp LG(TAB)   &trans    &mo 1    &trans              &trans      &trans  &trans  &trans
-//                     |       |      |       | float term|         |       |      |       |       
-                        &trans   &trans  &mo 2  &vim_term  &kp SPACE  &mo 2  &trans   &trans
+//                     |       |      |       | ide term|         |       |      |       |       
+                        &trans   &trans  &mo 2  &ide_term  &kp SPACE  &mo 2  &trans   &trans
 		  >;
 
 		  sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
