@@ -115,7 +115,7 @@
 				bindings = <
 // ------------------------------------------------------------------------------------------------------------
 // |   |        |          |            |            |   CTRL TAB    |                |          |                  |             |        |        |       |
-&trans  &trans      &trans      &trans      &trans     &kp LCTL(TAB)         &trans     &trans            &trans        &trans  &trans    &trans
+&trans  &trans      &trans      &trans      &trans     &kp LC(TAB)         &trans     &trans            &trans        &trans  &trans    &trans
 // |       |          |      cmd S       |     :q!       |     :%s       | copilot |                |    |      |     |        |        |       |
 &trans        &trans       &kp LG(S)  &vim_quit    &vim_find_replace     &ide_co_chat                     &trans &trans   &trans   &trans   &trans   &trans
 // |       |           |             |  code window   |            |  files  |                |    |         |     |        |        |       |
