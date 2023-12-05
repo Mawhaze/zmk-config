@@ -25,7 +25,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-			= <&kp LGUI &kp LALT &kp G>
+			= <&kp LG(LALT(G))>
 			;
 		};
 		ide_fe: ide_fe {
@@ -118,8 +118,8 @@
 &trans  &trans      &trans      &trans      &trans     &kp LCTL(TAB)         &trans     &trans            &trans        &trans  &trans    &trans
 // |       |          |      cmd S       |     :q!       |     :%s       | copilot |                |    |      |     |        |        |       |
 &trans        &trans       &kp LG(S)  &vim_quit    &vim_find_replace     &ide_co_chat                     &trans &trans   &trans   &trans   &trans   &trans
-// |       |           |             |            |            |  files  |                |    |         |     |        |        |       |
-&trans       &trans         &trans       &kp LGUI(N1)        &trans     &ide_fe                     &trans     &trans     &trans  &trans   &trans   &trans
+// |       |           |             |  code window   |            |  files  |                |    |         |     |        |        |       |
+&trans       &trans         &trans     &kp LG(N1)    &trans     &ide_fe                     &trans     &trans     &trans  &trans   &trans   &trans
 // |       |           |             |             |            |    cmd_tab  |        |      |          |                  |             |        |        |       |   
 &trans       &trans     &trans        &trans &trans    &mo 1     &kp LG(TAB)   &trans    &mo 1    &trans              &trans      &trans  &trans  &trans
 //                     |       |      |       | ide term|         |       |      |       |       
