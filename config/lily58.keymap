@@ -25,7 +25,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-			= <&kp LG(LALT(G))>
+			= <&kp LG(LA(G))>
 			;
 		};
 		ide_fe: ide_fe {
@@ -33,7 +33,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-			= <&kp LCTL &kp LSHFT &kp E>
+			= <&kp LC(LS(E))>
 			;
 		};
 		ide_term: ide_term {
@@ -41,7 +41,7 @@
 			compatible = "zmk,behavior-macro";
 			#binding-cells = <0>;
 			bindings
-			= <&kp LCTL &kp GRAVE>
+			= <&kp LC(GRAVE)>
 			;
 		};
 		vim_find_replace: vim_find_replace {
