@@ -64,7 +64,7 @@
 &kp GRAVE &kp Q &kp W &kp E   &kp R   &kp T         		            &kp Y &kp U   &kp I    &kp O  &kp P   &kp BACKSPACE
 // |  TAB  |  a  |  s  |  d   |  f    |  g   |    		               |  h   |  j    |  k    |  l   |   ;   |   ENTER   |
 &kp TAB   &kp A  &kp S  &kp D    &kp F &kp G       		               &kp H  &kp J    &kp K     &kp L   &kp SEMI    &kp ENTER
-// |  SHIFT |  z  |  x  |  c   |  v   |  b   |    		               |  n   |  m    |  ,    |  .   |   /   |   SHIFT   |
+// |  SHIFT |  z  |  x  |  c   |  v    |  b   |    		               |  n   |  m    |  ,    |  .   |   /   |   SHIFT   |
 &kp LSHFT &kp Z  &kp X  &kp C    &kp V  &kp B    		                  &kp N  &kp M    &kp COMMA     &kp DOT   &kp SLASH &kp RSHFT
 // | CTRL |  LGUI   |  LALT   |  \    |  '   |  RAISE   |  ESC   |	 VIM |  RAISE  |     |   home   |   end   |   delete  |   insert   | - |
 &kp LCTL &kp LGUI  &kp LALT  &kp BSLH &kp SQT &mo 1 &kp ESC  &mo 3 &mo 1 &kp HOME &kp END  &kp DELETE  &kp INSERT   &kp MINUS
