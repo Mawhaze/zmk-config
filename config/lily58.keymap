@@ -20,22 +20,6 @@
 			= <&kp COLON &kp Q &kp EXCL &kp ENTER>
 			;
 		};
-		ide_co_chat: ide_co_chat {
-			label = "switch to ide copilot chat";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&kp LG(LA(G))>
-			;
-		};
-		ide_fe: ide_fe {
-			label = "switch to ide file explorer";
-			compatible = "zmk,behavior-macro";
-			#binding-cells = <0>;
-			bindings
-			= <&kp LG(LS(E))>
-			;
-		};
 		ide_term: ide_term {
 			label = "switch to ide terminal";
 			compatible = "zmk,behavior-macro";
@@ -114,14 +98,14 @@
 		vim_layer {
 				bindings = <
 // ------------------------------------------------------------------------------------------------------------
-// |   |        |          |            |            |   CTRL TAB    |                |          |                  |             |        |        |       |
-&trans  &trans      &trans      &trans      &trans     &kp LC(TAB)         &trans     &trans            &trans        &trans  &trans    &trans
-// |       |          |      cmd S       |     :q!       |     :%s       | copilot |                |    |      |     |        |        |       |
-&trans        &trans       &kp LG(S)  &vim_quit    &vim_find_replace     &ide_co_chat                     &trans &trans   &trans   &trans   &trans   &trans
-// |       |           |             |  code window   |            |  files  |                |    |         |     |        |        |       |
-&trans       &trans         &trans     &kp LG(N1)    &trans     &ide_fe                     &trans     &trans     &trans  &trans   &trans   &trans
-// |       |           |             |             |            |    cmd_tab  |        |      |          |                  |             |        |        |       |   
-&trans       &trans     &trans        &trans &trans    &mo 1     &kp LG(TAB)   &trans    &mo 1    &trans              &trans      &trans  &trans  &trans
+// |   |        |          |            |            |       |                |          |                  |             |        |        |       |
+&trans  &trans      &trans      &trans      &trans     &trans         &trans     &trans            &trans        &trans  &trans    &trans
+// |       |          |      Save    |     :q!       |     :%s       |        |                |    |      |     |        |        |       |
+&trans        &trans       &kp LC(S)    &vim_quit      &vim_find_replace     &trans                     &trans &trans   &trans   &trans   &trans   &trans
+// |       |           |             |  code window   |            |        |                |    |         |     |        |        |       |
+&trans       &trans         &trans     &kp LC(N1)    &trans     &trans                     &trans     &trans     &trans  &trans   &trans   &trans
+// |       |           |             |             |            |    text_tab  |        |      |          |                  |             |        |        |       |   
+&trans       &trans     &trans        &trans &trans    &mo 1     &kp LC(TAB)   &trans    &mo 1    &trans              &trans      &trans  &trans  &trans
 //                     |       |      |       | ide term|         |       |      |       |       
                         &trans   &trans  &mo 2  &ide_term  &kp SPACE  &mo 2  &trans   &trans
 		  >;
