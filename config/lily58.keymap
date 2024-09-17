@@ -98,10 +98,10 @@
 		vim_layer {
 				bindings = <
 // ------------------------------------------------------------------------------------------------------------
-// |   |        |          |            |            |       |                |          |                  |             |        |        |       |
-&trans  &trans      &trans      &trans      &trans     &trans         &trans     &trans            &trans        &trans  &trans    &trans
-// |       |          |      Save    |     :q!       |     :%s       |        |                |    |      |     |        |        |       |
-&trans        &trans       &kp LC(S)    &vim_quit      &vim_find_replace     &trans                     &trans &trans   &trans   &trans   &trans   &trans
+// |       |   :q!     |          |     term_up       |            |       |                |          |                  |             |        |        |       |
+&trans      &vim_quit      &trans      &kp LC(PG_UP)      &trans     &trans         &trans     &trans            &trans        &trans  &trans    &trans
+// |       |          |      Save    |     term_down       |     :%s       |        |                |    |      |     |        |        |       |
+&trans        &trans       &kp LC(S)    &kp LC(PG_DN)      &vim_find_replace     &trans                     &trans &trans   &trans   &trans   &trans   &trans
 // |       |           |             |  code window   |            |        |                |    |         |     |        |        |       |
 &trans       &trans         &trans     &kp LC(N1)    &trans     &trans                     &trans     &trans     &trans  &trans   &trans   &trans
 // |       |           |             |             |            |    text_tab  |        |      |          |                  |             |        |        |       |   
