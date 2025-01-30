@@ -99,7 +99,7 @@
 				bindings = <
 // ------------------------------------------------------------------------------------------------------------
 // |       |   :q!     |          |     term_up       |            |   term_new    |                |          |                  |             |        |        |       |
-&trans      &vim_quit      &trans      &kp LC(PG_UP)      &trans      &kp LC(LS(`))         &trans     &trans            &trans        &trans  &trans    &trans
+&trans      &vim_quit      &trans      &kp LC(PG_UP)      &trans      &kp LC(LS(GRAVE))         &trans     &trans            &trans        &trans  &trans    &trans
 // |       |          |      Save    |     term_down       |     :%s       |        |                |    |      |     |        |        |       |
 &trans        &trans       &kp LC(S)    &kp LC(PG_DN)      &vim_find_replace     &trans                     &trans &trans   &trans   &trans   &trans   &trans
 // |       |           |             |  code window   |            |        |                |    |         |     |        |        |       |
