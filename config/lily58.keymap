@@ -105,7 +105,7 @@
 // |       |           |             |  code window   |            |        |                |    |         |     |        |        |       |
 &trans       &trans         &trans     &kp LC(N1)    &trans     &trans                     &trans     &trans     &trans  &trans   &trans   &trans
 // |       |           |             |             |            |    text_tab  |        |      |          |                  |             |        |        |       |   
-&trans       &trans     &trans        &trans &trans    &mo 1     &kp LC(TAB)   &trans    &mo 1    &trans              &trans      &trans  &trans  &trans
+&trans       &trans     &trans        &trans &trans    &mo 1     &kp LC(LS(E))   &trans    &mo 1    &trans              &trans      &trans  &trans  &trans
 //                     |       |      |       | ide term|         |       |      |       |       
                         &trans   &trans  &mo 2  &ide_term  &kp SPACE  &mo 2  &trans   &trans
 		  >;
