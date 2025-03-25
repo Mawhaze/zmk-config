@@ -102,8 +102,8 @@
 &trans      &vim_quit      &trans      &kp LC(PG_UP)      &trans      &kp LC(LS(GRAVE))         &trans     &trans            &trans        &trans  &trans    &trans
 // | alt/tab  |          |      Save    |     term_down       |     :%s       |        |                |    |      |     |        |        |       |
 &kp LA(TAB)        &trans       &kp LC(S)    &kp LC(PG_DN)      &vim_find_replace     &trans                     &trans &trans   &trans   &trans   &trans   &trans
-// |       |           |             |  code window   |            |        |                |    |         |     |        |        |       |
-&trans       &trans         &trans     &kp LC(N1)    &trans     &trans                     &trans     &trans     &trans  &trans   &trans   &trans
+// |       |           |             |  copilot   |            |        |                |    |         |     |        |        |       |
+&trans       &trans         &trans     &kp LC(LA(I))    &trans     &trans                     &trans     &trans     &trans  &trans   &trans   &trans
 // |       |           |             |             |            |    text_tab  |        |      |          |                  |             |        |        |       |   
 &trans       &trans     &trans        &trans &trans    &mo 1     &kp LC(LS(E))   &trans    &mo 1    &trans              &trans      &trans  &trans  &trans
 //                     |       |      |       | ide term|         |       |      |       |       
